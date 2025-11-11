@@ -1,0 +1,87 @@
+/* Exchange Rate Section Styling */
+.exchange-rate-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.exchange-rate-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.exchange-rate-container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.exchange-rate-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.exchange-rate-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 2px;
+}
+
+.exchange-rate-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Match reserves section styling */
+.reserve-container,
+.exchange-rate-container {
+    font-size: 0.9rem;
+}
+
+.reserve-container .payment-icon,
+.exchange-rate-container .payment-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Hover effects */
+.exchange-rate-container > div:hover {
+    background-color: rgba(102, 126, 234, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.dark .exchange-rate-container > div:hover {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+/* Rate display */
+.exchange-rate-container .font-bold {
+    font-size: 1rem;
+    color: var(--primary-color, #667eea);
+}
+
+/* Empty state styling */
+.exchange-rate-container .text-center {
+    padding: 2rem 1rem;
+}
+
+.exchange-rate-container .fa-2x {
+    margin-bottom: 0.5rem;
+    opacity: 0.3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .exchange-rate-container .payment-icon {
+        width: 28px;
+        height: 28px;
+        font-size: 12px;
+    }
+    
+    .exchange-rate-container .text-sm {
+        font-size: 0.8rem;
+    }
+    
+    .exchange-rate-container .font-bold {
+        font-size: 0.9rem;
+    }
+}
